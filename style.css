@@ -1,26 +1,198 @@
+* {
+    box-sizing: border-box;
+}
+
 :root {
     --font-size: 20px;
+    --white: rgb(250, 251, 247);
+    scrollbar-width: 0px !important;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@font-face {
+    font-family: coromantGaramond;
+    src: url('https://cdn.byran.tech/cdn/Cormorant_Garamond/CormorantGaramond-Regular.ttf');
+}
+
+@font-face {
+    font-family: coromantGaramond-SemiBold;
+    src: url('https://cdn.byran.tech/cdn/Cormorant_Garamond/CormorantGaramond-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: coromantGaramond-Bold;
+    src: url('https://cdn.byran.tech/cdn/Cormorant_Garamond/CormorantGaramond-Bold.ttf');
 }
 
 body {
-    background: #64b464;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--white);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+
+    /* Removes Padding */
+    margin: 0;
+    padding: 0;
 }
+
+a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+h1 {
+    font-family: coromantGaramond-SemiBold;
+}
+
+p {
+    text-align: center;
+    font-size: large;
+}
+
+bigBold {
+    font-weight: bold;
+    font-size: larger;
+}
+
+.mainPage {
+    background-image: url('./images/bg.png');
+    background-attachment: fixed;
+    background-color: rgb(19, 154, 207);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ANCHOR Testing/Debugging/Troubleshooting */
+.border {
+    border: 1px solid greenyellow;
+}
+
+.border2 {
+    border: 1px solid blue;
+}
+
+.border3 {
+    border: 1px solid red;
+}
+
+.largeBorder {
+    border: 1px solid greenyellow;
+}
+
+/* End Testing/Debugging/Troubleshooting */
+
+/* ANCHOR Hover Link Animation from https://github.com/codrops/LineHoverStyles/ (MIT License) */
+.link {
+    position: relative;
+}
+
+.link::before,
+.link::after {
+    position: absolute;
+    width: 100%;
+    height: 0.6px;
+    background: var(--white);
+    top: 110%;
+    left: 0;
+    pointer-events: none;
+}
+
+.link::before {
+    content: '';
+}
+
+.linkAnim::before,
+.linkAnim::after {
+    opacity: 0;
+    transform-origin: 50% 0%;
+    transform: translate3d(0, 3px, 0);
+    transition-property: transform, opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.2, 1, 0.8, 1);
+}
+
+.linkAnim:hover::before,
+.linkAnim:hover::after {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition-timing-function: cubic-bezier(0.2, 0, 0.3, 1);
+}
+
+.linkAnim::after {
+    content: '';
+    top: calc(110% + 5px);
+    width: 70%;
+    left: 15%;
+}
+
+.linkAnim::before,
+.linkAnim:hover::after {
+    transition-delay: 0.1s;
+}
+
+.linkAnim:hover::before {
+    transition-delay: 0s;
+}
+
+/* END Hover Link Animation */
 
 .flex {
     display: flex;
-    height: 100%;
-    width: 100%;
 }
 
-.flex-center {
-    justify-content: center;
-    align-items: center;
+.titleBar {
+    position: absolute;
+    width: 100vw;
 }
 
-.box {
-    background: #A8FFA8;
+.titleBar .logo {
+    position: absolute;
+    font-family: coromantGaramond;
+    font-size: 30px;
+    padding: 20px;
+}
+
+.titleBarLinksWrapper {
+    flex-wrap: wrap;
+    justify-content: flex-end;
     padding: 30px;
-    border-radius: 20px;
-    color: #2E362E;
+}
+
+.titleBarLinks {
+    padding: 0px 10px 0px 10px;
+    font-family: coromantGaramond;
+    font-size: 20px;
+}
+
+.gridWrapper {
+    display: grid;
+    grid-template-columns: [start] 10% [first] 33% [second] 33% [end];
+    grid-template-rows: [start] 12vh [first] auto [second] auto [third] 100px [end];
+}
+
+.teachingPhilosophyWrapper {
+    grid-column: first / second;
+    grid-row: 2 / 4;
+}
+
+.teachingPhilosophyTitle {
+    text-align: center;
+}
+
+.aboutMeWrapper {
+    grid-column: second / end;
+    grid-row: 4 / 5;
+}
+
+.aboutMeTitle {
+    text-align: center;
+}
+
+.aboutMe {
+    font-size: medium;
+    line-height: 1.5;
 }
