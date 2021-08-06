@@ -57,10 +57,14 @@ bigBold {
     font-size: larger;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 .mainPage {
-    background-image: url('./images/bg.png');
+    background-image: url('./images/bg.jpg');
     background-attachment: fixed;
-    background-color: rgb(19, 154, 207);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -170,8 +174,8 @@ bigBold {
 
 .gridWrapper {
     display: grid;
-    grid-template-columns: [start] 10% [first] 33% [second] 33% [end];
-    grid-template-rows: [start] 12vh [first] auto [second] auto [third] 100px [end];
+    grid-template-columns: [start] 12% [first] 33% [second] 33% [end];
+    grid-template-rows: [start] 15vh [first] auto [second] auto [third] 100px [end];
 }
 
 .teachingPhilosophyWrapper {
@@ -195,4 +199,72 @@ bigBold {
 .aboutMe {
     font-size: medium;
     line-height: 1.5;
+}
+
+@keyframes slideOut {
+    0% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%, 0 100%);
+        opacity: 1;
+    }
+
+    50% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 0);
+    }
+
+    99% {
+        visibility: visible;
+    }
+
+    100% {
+        clip-path: polygon(100% 0, 100% 0, 100% 0, 100% 0, 100% 0);
+        opacity: 0.4;
+        visibility: hidden;
+    }
+}
+
+.image {
+    background: rgba(151, 187, 98);
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    position: absolute;
+    background-position: 0 0;
+    background-size: cover;
+    animation: 1.8s linear slideOut 0.7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes flyOut {
+    from {
+        transform: translate(-10vw, 10vh);
+        opacity: 0.3;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    50% {
+    }
+
+    99% {
+        visibility: visible;
+    }
+
+    to {
+        transform: translate(110vw, -110vh);
+        visibility: hidden;
+        opacity: 0.5;
+    }
+}
+
+.golfBall {
+    z-index: 2;
+    position: absolute;
+    bottom: -10vh;
+    left: -10vw;
+    height: 7vh;
+    width: auto;
+    animation: 1.9s linear flyOut 0.5s;
+    animation-fill-mode: forwards;
 }
