@@ -71,6 +71,16 @@ img {
     overflow-x: hidden;
 }
 
+.philosophyPage {
+    background-image: url('./images/teaching.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
 /* ANCHOR Testing/Debugging/Troubleshooting */
 .border {
     border: 1px solid greenyellow;
@@ -143,6 +153,13 @@ img {
     transition-delay: 0s;
 }
 
+.link.activated::after,
+.link.activated::before {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition-timing-function: cubic-bezier(0.2, 0, 0.3, 1);
+}
+
 /* END Hover Link Animation */
 
 .flex {
@@ -170,18 +187,19 @@ img {
     flex-wrap: wrap;
     justify-content: flex-end;
     padding: 30px;
+    padding-right: 20px;
 }
 
 .titleBarLinks {
-    padding: 0px 10px 0px 10px;
+    padding: 0px 20px 0px 20px;
     font-family: coromantGaramond-SemiBold;
     font-size: 1.5em;
 }
 
 .gridWrapper {
     display: grid;
-    grid-template-columns: [start] 10% [first] 33% [second] 33% [end];
-    grid-template-rows: [start] 50vh [first] auto [second] auto [third] 100px [end];
+    grid-template-columns: [start] 20% [first] 45% [second] 3% [end];
+    grid-template-rows: [start] 43vh [first] auto [second] auto [third] 100px [end];
 }
 
 .aboutMeWrapper {
@@ -190,7 +208,7 @@ img {
 }
 
 .aboutMe {
-    font-size: 1.1em;
+    font-size: 1.13em;
     line-height: 1.5;
     padding: 5px;
 }
@@ -230,4 +248,27 @@ img {
     position: absolute;
     bottom: -110px;
     width: 150%;
+}
+
+.teachingPhilosophyWrapper {
+    position: absolute;
+    padding: 3px;
+    flex-wrap: wrap;
+    height: fit-content;
+    width: fit-content;
+    top: 30%;
+    left: 56%;
+    border-radius: 50px;
+    background-color: rgba(136, 136, 136, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.teachingPhilosophyTitle {
+    text-align: center;
+}
+
+.teachingPhilosophy {
+    font-size: 1.2em;
+    max-width: 500px;
 }
