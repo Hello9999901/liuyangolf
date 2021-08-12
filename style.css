@@ -180,93 +180,19 @@ img {
 
 .gridWrapper {
     display: grid;
-    grid-template-columns: [start] 5% [first] 33% [second] 33% [end];
-    grid-template-rows: [start] 23vh [first] auto [second] auto [third] 100px [end];
-}
-
-.teachingPhilosophyWrapper {
-    grid-column: first / second;
-    grid-row: 2 / 4;
-}
-
-.teachingPhilosophyTitle {
-    text-align: center;
-}
-
-.teachingPhilosophy {
-    line-height: 1.5;
+    grid-template-columns: [start] 10% [first] 33% [second] 33% [end];
+    grid-template-rows: [start] 50vh [first] auto [second] auto [third] 100px [end];
 }
 
 .aboutMeWrapper {
-    grid-column: second / end;
+    grid-column: 2 / 3;
     grid-row: 4 / 6;
 }
 
-.aboutMeTitle {
-    text-align: center;
-}
-
 .aboutMe {
-    font-size: 1em;
+    font-size: 1.1em;
     line-height: 1.5;
     padding: 5px;
-}
-
-@keyframes slideOut {
-    0% {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%, 0 100%);
-        opacity: 1;
-    }
-
-    50% {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 0);
-    }
-
-    99% {
-        visibility: visible;
-    }
-
-    100% {
-        clip-path: polygon(100% 0, 100% 0, 100% 0, 100% 0, 100% 0);
-        opacity: 0.4;
-        visibility: hidden;
-    }
-}
-
-.image {
-    background: rgba(151, 187, 98);
-    height: 100vh;
-    width: 100vw;
-    z-index: 1;
-    position: absolute;
-    background-position: 0 0;
-    background-size: cover;
-    animation: 1.8s linear slideOut 0.7s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes flyOut {
-    from {
-        transform: translate(-10vw, 10vh);
-        opacity: 0.3;
-    }
-
-    20% {
-        opacity: 1;
-    }
-
-    50% {
-    }
-
-    99% {
-        visibility: visible;
-    }
-
-    to {
-        transform: translate(110vw, -110vh);
-        visibility: hidden;
-        opacity: 0.5;
-    }
 }
 
 .golfBall {
@@ -291,4 +217,17 @@ img {
     position: absolute;
     right: 100px;
     top: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageDescription {
+    margin: 0;
+    padding: 50px;
+    font-family: coromantGaramond-Bold;
+    font-size: 21px;
+    position: absolute;
+    bottom: -110px;
+    width: 150%;
 }
