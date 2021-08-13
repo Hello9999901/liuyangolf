@@ -82,6 +82,16 @@ img {
     overflow-x: hidden;
 }
 
+.contactPage {
+    background-image: url('./images/trees.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
 /* ANCHOR Testing/Debugging/Troubleshooting */
 .border {
     border: 1px solid greenyellow;
@@ -248,6 +258,26 @@ img {
     align-items: flex-end;
 }
 
+.contact.roundImage {
+    background-image: url('./images/swing.jpg');
+    background-repeat: none;
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%;
+    height: 40vw;
+    width: 40vw;
+    max-width: 250px;
+    max-height: 250px;
+    min-width: 100px;
+    min-height: 100px;
+    position: absolute;
+    right: 7vw;
+    top: 15vh;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
 .imageDescription {
     position: absolute;
     margin-top: 60px;
@@ -259,6 +289,12 @@ img {
     display: grid;
     grid-template-columns: [start] 43% [first] 28% [second] auto;
     grid-template-rows: [start] 12vh [first] auto;
+}
+
+.contactGridWrapper {
+    display: grid;
+    grid-template-columns: [start] 20% [first] 49% [second] auto;
+    grid-template-rows: [start] 17vh [first] auto;
 }
 
 .teachingPhilosophyWrapper {
@@ -273,6 +309,8 @@ img {
 .teachingPhilosophy {
     font-size: 1.2em;
 }
+
+
 
 @media screen and (max-width: 500px) {
     .gridWrapper {
@@ -291,6 +329,14 @@ img {
         padding: 50px;
         padding-bottom: 0px;
         bottom: 460px;
+    }
+
+    .contactGridWrapper {
+        position: absolute;
+        display: flex;
+        padding: 100px;
+        padding-bottom: 0px;
+        bottom: 300px;
     }
 
     .teachingPhilosophyWrapper {
