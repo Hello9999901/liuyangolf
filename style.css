@@ -34,7 +34,7 @@ body {
     color: var(--white);
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
-    font-size: calc(0.73vw + 4px);
+    font-size: calc(0.73vw + 6px);
 
     /* Removes Padding */
     margin: 0;
@@ -348,11 +348,17 @@ img {
 .teachingPhilosophyWrapper {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+
+    animation: fadeInRight;
+    animation-duration: var(--anim-dur);
 }
 
 .experienceWrapper {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+
+    animation: fadeInLeft;
+    animation-duration: var(--anim-dur);
 }
 
 .teachingPhilosophyTitle {
@@ -403,6 +409,7 @@ img {
         position: absolute;
         display: flex;
         padding: 100px;
+        padding-left: 50px;
         padding-bottom: 0px;
         bottom: 120px;
     }
@@ -419,6 +426,10 @@ img {
         width: 200px;
         position: absolute;
         right: 0;
+    }
+    .experienceRoundImage {
+        right: 4vw;
+        top: 15vh;
     }
 }
 
