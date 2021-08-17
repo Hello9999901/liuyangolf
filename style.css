@@ -293,7 +293,34 @@ img {
     align-items: flex-end;
 }
 
+.experienceRoundImage {
+    background-image: url('./images/st_andrews.jpg');
+    background-repeat: none;
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%;
+    height: 40vw;
+    width: 40vw;
+    max-width: 250px;
+    max-height: 250px;
+    min-width: 100px;
+    min-height: 100px;
+    position: absolute;
+    right: 7vw;
+    top: 15vh;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
 .imageDescription {
+    position: absolute;
+    margin-top: 60px;
+    font-family: coromantGaramond-Bold;
+    font-size: 1.4em;
+}
+
+.experienceImageDescription {
     position: absolute;
     margin-top: 60px;
     font-family: coromantGaramond-Bold;
@@ -308,7 +335,7 @@ img {
 
 .experienceGridWrapper {
     display: grid;
-    grid-template-columns: [start] 20% [first] 60% [second] auto;
+    grid-template-columns: [start] 20% [first] 50% [second] auto;
     grid-template-rows: [start] 9vh [first] auto;
 }
 
