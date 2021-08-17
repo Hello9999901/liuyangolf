@@ -6,6 +6,8 @@
     --font-size: 20px;
     --white: rgb(250, 251, 247);
     scrollbar-width: 0px !important;
+    --anim-dur: 1.2s;
+    --anim-dur-long: 2s;
 }
 
 ::-webkit-scrollbar {
@@ -32,11 +34,14 @@ body {
     color: var(--white);
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
-    font-size: calc(0.694vw + 6px);
+    font-size: calc(0.73vw + 4px);
 
     /* Removes Padding */
     margin: 0;
     padding: 0;
+
+    animation: fadeIn;
+    animation-duration: var(--anim-dur-long);
 }
 
 a {
@@ -82,8 +87,18 @@ img {
     overflow-x: hidden;
 }
 
+.experiencePage {
+    background-image: url('./images/fairway.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
 .contactPage {
-    background-image: url('./images/trees.jpg');
+    background-image: url('./images/exp.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -193,6 +208,9 @@ img {
     background-color: rgba(255, 255, 255, 0.85);
     padding: 10px;
     padding-left: 14px;
+
+    animation: fadeInLeft;
+    animation-duration: var(--anim-dur);
 }
 
 .titleBarLinksWrapper {
@@ -201,6 +219,9 @@ img {
     justify-content: flex-end;
     padding: 30px;
     padding-right: 20px;
+
+    animation: fadeInDown;
+    animation-duration: var(--anim-dur);
 }
 
 .titleBarLinks {
@@ -225,6 +246,20 @@ img {
     font-size: 1.13em;
     line-height: 1.5;
     padding: 5px;
+}
+
+.contactWrapper {
+    grid-column: 2 / 3;
+    grid-row: 4 / 6;
+}
+
+.contact {
+    font-size: 1.2em;
+    line-height: 1.5;
+    padding: 5px;
+
+    animation: fadeInUp;
+    animation-duration: var(--anim-dur);
 }
 
 .golfBall {
@@ -258,26 +293,6 @@ img {
     align-items: flex-end;
 }
 
-.contact.roundImage {
-    background-image: url('./images/swing.jpg');
-    background-repeat: none;
-    background-position: center;
-    background-size: contain;
-    border-radius: 50%;
-    height: 40vw;
-    width: 40vw;
-    max-width: 250px;
-    max-height: 250px;
-    min-width: 100px;
-    min-height: 100px;
-    position: absolute;
-    right: 7vw;
-    top: 15vh;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-}
-
 .imageDescription {
     position: absolute;
     margin-top: 60px;
@@ -291,13 +306,24 @@ img {
     grid-template-rows: [start] 12vh [first] auto;
 }
 
+.experienceGridWrapper {
+    display: grid;
+    grid-template-columns: [start] 20% [first] 60% [second] auto;
+    grid-template-rows: [start] 9vh [first] auto;
+}
+
 .contactGridWrapper {
     display: grid;
-    grid-template-columns: [start] 20% [first] 49% [second] auto;
-    grid-template-rows: [start] 17vh [first] auto;
+    grid-template-columns: [start] 55% [first] 49% [second] auto;
+    grid-template-rows: [start] 57vh [first] auto;
 }
 
 .teachingPhilosophyWrapper {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.experienceWrapper {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
 }
@@ -306,10 +332,17 @@ img {
     text-align: center;
 }
 
+.experienceTitle {
+    text-align: center;
+}
+
 .teachingPhilosophy {
     font-size: 1.2em;
 }
 
+.experience, .experience~ul {
+    font-size: 1.3em;
+}
 
 
 @media screen and (max-width: 500px) {
@@ -337,6 +370,14 @@ img {
         padding: 100px;
         padding-bottom: 0px;
         bottom: 300px;
+    }
+
+    .experienceGridWrapper {
+        position: absolute;
+        display: flex;
+        padding: 100px;
+        padding-bottom: 0px;
+        bottom: 120px;
     }
 
     .teachingPhilosophyWrapper {
