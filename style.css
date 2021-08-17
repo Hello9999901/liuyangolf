@@ -377,6 +377,11 @@ img {
     font-size: 1.3em;
 }
 
+@media screen and (min-width: 1550px) {
+    .imageDescription {
+        font-size: 23px;
+    }
+}
 
 @media screen and (max-width: 500px) {
     .gridWrapper {
@@ -433,8 +438,8 @@ img {
     }
 }
 
-@media screen and (min-width: 1550px) {
-    .imageDescription {
-        font-size: 23px;
+@media screen and (max-width: 350px) {
+    body {
+        font-size: 6px;
     }
 }
