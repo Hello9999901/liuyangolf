@@ -193,6 +193,7 @@ img {
 }
 
 .titleBar {
+    z-index: 1;
     position: absolute;
     width: 100vw;
 }
@@ -226,6 +227,7 @@ img {
 
 .titleBarLinks {
     padding: 0px 20px 0px 20px;
+    padding-bottom: 10px;
     font-family: coromantGaramond-SemiBold;
     font-size: 1.5em;
     line-height: 1.6;
@@ -289,8 +291,6 @@ img {
     right: 7vw;
     top: 15vh;
     display: flex;
-    flex-direction: row;
-    align-items: flex-end;
 }
 
 .experienceRoundImage {
@@ -314,15 +314,10 @@ img {
 }
 
 .imageDescription {
+    display: flex;
+    margin-bottom: 0px;
+    margin-top: 270px;
     position: absolute;
-    margin-top: 60px;
-    font-family: coromantGaramond-Bold;
-    font-size: 1.4em;
-}
-
-.experienceImageDescription {
-    position: absolute;
-    margin-top: 60px;
     font-family: coromantGaramond-Bold;
     font-size: 1.4em;
 }
@@ -407,7 +402,7 @@ img {
         display: flex;
         padding: 100px;
         padding-bottom: 0px;
-        bottom: 300px;
+        bottom: 450px;
     }
 
     .experienceGridWrapper {
@@ -424,7 +419,7 @@ img {
     }
 
     .imageDescription {
-        margin-top: 40px;
+        margin-top: 140px;
     }
 
     .titleBarLinksWrapper {
@@ -434,7 +429,7 @@ img {
     }
     .experienceRoundImage {
         right: 4vw;
-        top: 15vh;
+        top: 20vh;
     }
 }
 
