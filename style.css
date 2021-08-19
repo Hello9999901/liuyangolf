@@ -6,8 +6,8 @@
     --font-size: 20px;
     --white: rgb(250, 251, 247);
     scrollbar-width: 0px !important;
-    --anim-dur: 1.2s;
-    --anim-dur-long: 2s;
+    --anim-dur: 1.4s;
+    --anim-dur-long: 2.2s;
 }
 
 ::-webkit-scrollbar {
@@ -242,6 +242,9 @@ img {
 .aboutMeWrapper {
     grid-column: 2 / 3;
     grid-row: 4 / 6;
+
+    animation: zoomIn;
+    animation-duration: var(--anim-dur);
 }
 
 .aboutMe {
@@ -260,7 +263,7 @@ img {
     line-height: 1.5;
     padding: 5px;
 
-    animation: fadeInUp;
+    animation: fadeInRight;
     animation-duration: var(--anim-dur);
 }
 
@@ -291,6 +294,9 @@ img {
     right: 7vw;
     top: 15vh;
     display: flex;
+
+    animation: fadeInUp;
+    animation-duration: var(--anim-dur);
 }
 
 .experienceRoundImage {
@@ -311,6 +317,9 @@ img {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+
+    animation: fadeInRight;
+    animation-duration: var(--anim-dur);
 }
 
 .imageDescription {
@@ -320,6 +329,9 @@ img {
     position: absolute;
     font-family: coromantGaramond-Bold;
     font-size: 1.4em;
+
+    animation: fadeInUp;
+    animation-duration: var(--anim-dur);
 }
 
 .philosophyGridWrapper {
