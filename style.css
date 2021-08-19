@@ -386,7 +386,7 @@ img {
         justify-content: center;
         padding: 60px;
         padding-bottom: 0px;
-        bottom: 130px;
+        bottom: 100px;
     }
 
     .philosophyGridWrapper {
@@ -394,15 +394,15 @@ img {
         display: flex;
         padding: 50px;
         padding-bottom: 0px;
-        bottom: 460px;
+        bottom: 300px;
     }
 
     .contactGridWrapper {
         position: absolute;
         display: flex;
-        padding: 100px;
+        padding: 70px;
         padding-bottom: 0px;
-        bottom: 450px;
+        bottom: 360px;
     }
 
     .experienceGridWrapper {
@@ -411,7 +411,7 @@ img {
         padding: 100px;
         padding-left: 50px;
         padding-bottom: 0px;
-        bottom: 120px;
+        bottom: 40px;
     }
 
     .teachingPhilosophyWrapper {
@@ -419,7 +419,7 @@ img {
     }
 
     .imageDescription {
-        margin-top: 140px;
+        margin-top: 160px;
     }
 
     .titleBarLinksWrapper {
@@ -429,7 +429,12 @@ img {
     }
     .experienceRoundImage {
         right: 4vw;
-        top: 20vh;
+        top: 23vh;
+    }
+    .roundImage {
+        position: absolute;
+        margin-right: 70px;
+        display: flex;
     }
 }
 
