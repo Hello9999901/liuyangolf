@@ -263,7 +263,7 @@ img {
     line-height: 1.5;
     padding: 5px;
 
-    animation: fadeInRight;
+    animation: fadeInLeft;
     animation-duration: var(--anim-dur);
 }
 
@@ -318,7 +318,7 @@ img {
     flex-direction: row;
     align-items: flex-end;
 
-    animation: fadeInRight;
+    animation: fadeIn;
     animation-duration: var(--anim-dur);
 }
 
@@ -356,7 +356,7 @@ img {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
 
-    animation: fadeInRight;
+    animation: zoomInRight;
     animation-duration: var(--anim-dur);
 }
 
@@ -398,7 +398,7 @@ img {
         justify-content: center;
         padding: 60px;
         padding-bottom: 0px;
-        bottom: 100px;
+        bottom: 80px;
     }
 
     .philosophyGridWrapper {
@@ -420,10 +420,9 @@ img {
     .experienceGridWrapper {
         position: absolute;
         display: flex;
-        padding: 100px;
-        padding-left: 50px;
-        padding-bottom: 0px;
-        bottom: 40px;
+        padding-left: 15px;
+        padding-right: 46vw;
+        bottom: 20px;
     }
 
     .teachingPhilosophyWrapper {
@@ -446,6 +445,7 @@ img {
     .roundImage {
         position: absolute;
         margin-right: 70px;
+        top: 14.5vh;
         display: flex;
     }
 }
@@ -453,5 +453,12 @@ img {
 @media screen and (max-width: 350px) {
     body {
         font-size: 6px;
+    }
+    .contactGridWrapper {
+        position: absolute;
+        display: flex;
+        padding: 70px;
+        padding-bottom: 0px;
+        bottom: 300px;
     }
 }
